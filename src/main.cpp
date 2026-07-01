@@ -1,18 +1,16 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+#include "pins.h";
+#include "config.h";
+#include "states.h";
 
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+void setup()
+{
+    pinMode(POWER_LED, OUTPUT); //Setting mode to output for power LED
+    digitalWrite(POWER_LED, HIGH);  //If there is power then power LED should always be on
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+void loop()
+{
+   
 }
