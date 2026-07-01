@@ -1,8 +1,8 @@
 #include <Arduino.h>
 
-#include "pins.h";
-#include "config.h";
-#include "states.h";
+#include "pins.h"
+#include "config.h"
+#include "states.h"
 
 void setup()
 {
