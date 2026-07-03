@@ -19,7 +19,7 @@ public:
     void update();
 
     state getstate() const;
-    void setstate(state newstate);
+    void setstate(state new_state);
 
 private:
     state current_state;
