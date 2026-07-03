@@ -11,3 +11,5 @@ constexpr int POWER_LED = 12;
 constexpr int FAIL_LED = 13;
 constexpr int PROCESSING_LED = 14;
 constexpr int PASS_LED = 15;
+
+constexpr int TDS_SENSOR = 34;

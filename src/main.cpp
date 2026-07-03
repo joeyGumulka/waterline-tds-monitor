@@ -1,16 +1,15 @@
-#include <Arduino.h>
+#include <HardwareSerial.h>
+const int TDS_PIN = 34;  // Change to your ADC pin
 
-#include "pins.h"
-#include "config.h"
-#include "states.h"
-
-void setup()
-{
-    pinMode(POWER_LED, OUTPUT); //Setting mode to output for power LED
-    digitalWrite(POWER_LED, HIGH);  //If there is power then power LED should always be on
+void setup() {
+  Serial.begin(115200);
 }
 
-void loop()
-{
-   
+void loop() {
+  int raw = analogRead(TDS_PIN);
+
+  Serial.print("Raw ADC: ");
+  Serial.println(raw);
+
+  delay(500);
 }
