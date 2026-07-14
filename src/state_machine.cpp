@@ -1,5 +1,6 @@
 #include "states.h"
 #include "pins.h"
+#include "config.h"
 #include <Arduino.h>
 
 unsigned long cycle_start_time;
@@ -111,7 +112,7 @@ void state_machine::filling_state()
 {
     digitalWrite(FILL_PUMP, HIGH);
 
-    if (millis() - cycle_start_time >= 2000)
+    if (millis() - cycle_start_time >= FILL_PUMP_TIME)
     {
         digitalWrite(FILL_PUMP, LOW);
         setstate(state::testing);
@@ -156,7 +157,7 @@ void state_machine::pass_drainstate()
 {
     digitalWrite(PASS_PUMP, HIGH);
 
-    if (millis() - cycle_start_time >= 5000)
+    if (millis() - cycle_start_time >= DRAIN_PUMP_TIME)
     {
         digitalWrite(PASS_PUMP, LOW);
         setstate(state::idle);
@@ -167,7 +168,7 @@ void state_machine::fail_drainstate()
 {
     digitalWrite(FAIL_PUMP, HIGH);
 
-    if (millis() - cycle_start_time >= 5000)
+    if (millis() - cycle_start_time >= DRAIN_PUMP_TIME)
     {
         digitalWrite(FAIL_PUMP, LOW);
         setstate(state::idle);
