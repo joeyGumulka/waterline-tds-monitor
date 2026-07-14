@@ -6,10 +6,16 @@
 #include <Arduino.h>
 
 //Pin definitions
-constexpr int POWER_LED = 12;
+constexpr int POWER_LED = 2;
 
 constexpr int FAIL_LED = 13;
 constexpr int PROCESSING_LED = 14;
-constexpr int PASS_LED = 15;
+constexpr int PASS_LED = 33;
 
 constexpr int TDS_SENSOR = 34;
+
+constexpr int FILL_PUMP = 18;
+constexpr int PASS_PUMP = 19;
+constexpr int FAIL_PUMP = 21;
+
+constexpr int START_BUTTON = 23;
